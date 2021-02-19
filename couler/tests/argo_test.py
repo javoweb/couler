@@ -199,7 +199,7 @@ class ArgoTest(ArgoBaseTestCase):
             couler.run_script(
                 image="docker/whalesay:latest",
                 args=inputs,
-                command=[("cat %s" % inputs[1].path)],
+                command=[("cat %s" % inputs[0].path)],
                 source='sadfa\nasdf'
             )
 
