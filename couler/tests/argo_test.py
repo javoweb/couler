@@ -179,7 +179,7 @@ class ArgoTest(ArgoBaseTestCase):
 
     def test_artifact_passing_script_container(self):
         def producer():
-            output_artifact = couler.create_simple_io_artifact(
+            output_artifact = couler.create_io_artifact(
                 path="/mnt/t1.txt",
             )
 
@@ -199,7 +199,7 @@ class ArgoTest(ArgoBaseTestCase):
             couler.run_script(
                 image="docker/whalesay:latest",
                 args=inputs,
-                command=[("cat %s" % inputs[0].path)],
+                command=[("cat %s" % inputs[1].path)],
                 source='sadfa\nasdf'
             )
 
